@@ -1,4 +1,4 @@
-package com.flipkart.fmcggrocery.fmcggrocery;
+package com.flipkart.fmcggrocery.fmcggrocery.activities;
 
 import android.Manifest;
 import android.app.Activity;
@@ -8,16 +8,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.flipkart.fmcggrocery.fmcggrocery.R;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 
@@ -65,7 +63,7 @@ public class BarCodeScannerActivity extends AppCompatActivity implements ZXingSc
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 // User has denied the permission at least once. Ask it again.
                 // In future we may want to show a permission request rationale here.
-                ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST);
             } else {
                 // Asking this permission for the first time.
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST);
